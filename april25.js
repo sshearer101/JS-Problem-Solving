@@ -34,3 +34,24 @@ function dropCap(n) {
     const newArray = n.split(' ')
    return newArray.map((a, i) => (a.length > 2 ? a.charAt(0).toUpperCase() + a.toLowerCase().slice(1) : a)).join(' ')
   }
+
+
+//   Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+//   Example:
+//   ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+
+  function removeEveryOther(arr){
+  
+    const finalArray = []
+    
+    for (let x = 0; x<arr.length; x++){
+      if (x % 2 === 0){
+        finalArray.push(arr[x])
+      }
+    }
+    return finalArray
+  }
+  
+  
