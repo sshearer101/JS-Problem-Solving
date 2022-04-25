@@ -27,3 +27,10 @@ function dropCap(n) {
     
   return finalArray.join(' ')
   }
+
+  //alternative versions
+
+  function dropCap(n) {
+    const newArray = n.split(' ')
+   return newArray.map((a, i) => (a.length > 2 ? a.charAt(0).toUpperCase() + a.toLowerCase().slice(1) : a)).join(' ')
+  }
