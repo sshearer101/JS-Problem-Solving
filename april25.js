@@ -67,3 +67,9 @@ function dropCap(n) {
   
     return x ** (1/n)
   }
+
+  //alternative 
+
+  function root(x, n) {
+    return Math.pow(x, 1/n)
+   }
