@@ -14,6 +14,18 @@
 // returns 90;
 
 
+
+// two parts of reducer (accumulator, current value), value at end
+
+//const numbers = [1, 2, 3, 4, 5]
+// numbers.reduce(function myFunc (total, num){
+//     return   total + num
+// }, initial value)
+
+//
+// will start at initial value which can be set to 0, then will add num to update total
+
+
 function chain(x, fns) {
     return fns.reduce(function(x, fn) {
       return fn(x)
