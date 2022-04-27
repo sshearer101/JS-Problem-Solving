@@ -31,3 +31,15 @@ function chain(x, fns) {
       return fn(x)
     }, x)
   }
+
+//Another reduce example 
+
+function sum(array) {
+    return array.reduce(function (a, b) {return a + b})
+  }
+  
+  function sum(array) {
+    return array.reduce((a,b) => {return a + b})
+  }
+  
+  
