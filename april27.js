@@ -61,3 +61,42 @@ function sum(array) {
   function bestPrice(array) {
     return (array.reduce(function (a, b) {return a + b})/array.length)
     }
+
+
+
+
+
+    // You have a string of length n consisting of zeroes and ones. Consider the following operation:
+
+    // Choose any two adjacent positions in the string
+    // If one of them is 0, and the other one is 1, 
+    // remove these two digits from the string.
+    // What is the length of the smallest string that you can get after applying this operation multiple times?
+    
+    // Example
+    // For s = "01010", the result should be 1.
+    
+    // "01010" -> " 010" -> " 0"
+    
+    // For s = "110100", the result should be 2.
+    
+    // "110100" -> "1 100" -> "1 0"
+    
+    // Note that after the operations, the remaining digits are separated by spaces and thus not adjacent ;-)
+
+
+    //if index and index + 1 equal each other, add to out
+    // or change the loop to increase to index + 2 and index + 3
+    //and loop through again
+    function zeroAndOne(s) {
+        let out = 0;
+        for (let i = 0; i < s.length; i++){
+           if (s[i] === s[i+1] || i === s.length-1){
+              out++;
+            }
+         else{
+              i++;
+         }
+        }
+        return out;
+      }
