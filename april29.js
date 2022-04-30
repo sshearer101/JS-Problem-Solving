@@ -37,3 +37,67 @@ function countPositivesSumNegatives(input) {
       }
   }
   
+
+  //Alternative 
+
+  function countPositivesSumNegatives(input) {
+    if (input == null || input.length == 0)
+      return [];
+    
+    var positive = 0;
+    var negative = 0;
+    
+    for (var i=0, l=input.length; i<l; ++i)
+    {
+      if (input[i] > 0)
+        ++ positive;
+      else
+        negative += input[i];
+    }
+    
+    return [positive, negative];
+}
+
+function countPositivesSumNegatives(input) {
+    return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+}
+
+
+// Odd bits are getting ready for Bits Battles.
+
+// Therefore the n bits march from right to left along an 8 bits path. Once the most-significant bit reaches the left their march is done. Each step will be saved as an array of 8 integers.
+
+// Return an array of all the steps.
+
+// 1 <= n <= 8
+
+// NOTE: n != 0, because n represents the number of 1s.
+
+// Examples
+// This resembles a simple 8 LED chaser:
+
+// n = 3
+
+// 00000111
+// 00001110
+// 00011100
+// 00111000
+// 01110000
+// 11100000
+// n = 7
+
+// 01111111
+// 11111110
+
+function bitMarch (n) {
+    console.log("n",n);
+    var arr = [];
+    for(var i = 7; i >= n-1; i--){
+      var result =[0,0,0,0,0,0,0,0];
+      for(var j = 0 ; j<n; j++){
+        result[i-j] = 1;
+      }
+      arr.push(result);
+    }
+    return arr;
+  }
