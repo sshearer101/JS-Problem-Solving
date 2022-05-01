@@ -12,7 +12,6 @@ function stringMerge(string1, string2, letter){
     const secondString = string2.split('')
     
    let first = ''
-   let second = ''
          
 
    //first for loop 
@@ -27,16 +26,20 @@ function stringMerge(string1, string2, letter){
      break;
    }
    }
-     
+   //second for loop
+   // when loop hits letter, splice through second string
+   // splice will take the first number as index, and in this case [0], and mutate the array to remove x amount of indexes
+   // In this case, x would equal the number until the letter is found, so those letters would be removed from secondString
+   // Once those letters are removed, the loop breaks
    for (let x = 0; x<secondString.length; x++){
      if (secondString[x] === letter){
        
-       const answer = secondString.splice(0, x)
+       secondString.splice(0, x)
    
        break;
      }
    }
-   
+   // return the first and the second strings together, while joining the array
       return (first + secondString.join(''))
    }
    
