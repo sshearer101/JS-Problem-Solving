@@ -43,3 +43,16 @@ function stringMerge(string1, string2, letter){
       return (first + secondString.join(''))
    }
    
+   //alternative solution
+
+
+
+   //slice(0, number) --> this will be starting at index[0] and going to number. It keeps everything between.
+        // In this slice it finds the index of the letter, and keeps every letter until that index
+   //In the second slice(letter), it deletes everything up to that number. 
+        //It finds the index of letter, and deletes everything leading up to it. 
+   function stringMerge(string1, string2, letter) {
+    return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter));
+    
+  
+  }
