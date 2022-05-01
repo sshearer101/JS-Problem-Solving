@@ -79,6 +79,8 @@ function stringMerge(string1, string2, letter){
 // str = "In 2015, I want to know how much does iPhone 6+ cost?"
 
 
+//match finds the values that equal that. In this case, it is finding all of the values that equal a number by using regex
+//Then it is mapped, and reduced to have all of the values added together, starting at zero.
 
   function sumFromString(str){
     return (str.match(/\d+/g) || []).map(Number).reduce((a, b) => a + b, 0)
