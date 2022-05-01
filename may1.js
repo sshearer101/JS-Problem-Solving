@@ -14,6 +14,10 @@ function stringMerge(string1, string2, letter){
    let first = ''
    let second = ''
          
+
+   //first for loop 
+   //variable will equal all elemnts of array until letter is reached
+   //loop ends once letter is reached with break
    for (let i = 0; i<firstString.length; i++){
      if(firstString[i] !== letter){
        first += firstString[i]
