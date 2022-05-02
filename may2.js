@@ -42,3 +42,78 @@ function solution(A, K) {
     else
         return true;
 }
+
+
+
+
+
+
+
+
+//bbaaab 
+//3 char added
+
+function solution(S) {
+    // const array = S.split('')
+
+    let count = 1
+    let maxCount = 0
+    let result = 0
+
+    for (let i = 1; i<S.length; i++){
+        if (S.charAt(i) != S.charAt(i-1)){
+            maxCount = Math.max(maxCount, count)
+           
+        } else{
+            count++
+        }
+    }
+
+    maxCount = Math.max(maxCount, count)
+    count = 1
+    for (let i = 1; i<S.length; i++){
+        if (S.charAt(i) != S.charAt(i-1)){
+        result = result + maxCount - count
+        count = 1
+    }
+    else{
+        count++
+    }
+
+    }
+    result = result + maxCount - count
+    return result
+}
+
+
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution() {
+    // write your code in Javascript
+    //
+    // you can access DOM Tree using DOM Object Model:
+    //    document.getElementsByTagName
+    // or using jQuery:
+    //    $('some_tag')
+    //
+    // please note that element.innerText is not supported,
+    // you can use element.textContent instead.
+
+    const arr = $('td').map(function(a) {
+        let $td = $(this)
+        return $td.css('background-color') !== $td.css('color') ? $td.text() : null}).get()
+    return (arr.join(''))
+}
+
+
+
+
+function solution(nums){
+    if (nums === [] || nums === null){
+      return []
+    }
+    else {
+    return nums.sort(function(a, b) {return a-b})
+    }
+  }
