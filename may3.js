@@ -51,8 +51,6 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 
 
   function noSpace(x){
-    //  console.log(x.split(''))
-    //  const answer = x.split('').map((a) => a === ''? x.splice(a)  : a)
       const array = x.split('')
       const newArray = []
       for (let i = 0; i<array.length; i++){
@@ -62,3 +60,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
       }
       return (newArray.join(''))
     }
+
+//alternative
+
+function noSpace(x){return x.split(' ').join('')}
