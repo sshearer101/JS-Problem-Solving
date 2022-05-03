@@ -50,6 +50,9 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
   }
 
 
+  //Simple, remove the spaces from the string, then return the resultant string.
+
+
   function noSpace(x){
       const array = x.split('')
       const newArray = []
