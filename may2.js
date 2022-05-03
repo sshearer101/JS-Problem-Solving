@@ -195,3 +195,13 @@ function bingo(a) {
     return sortedArray.join("") * Math.sign(n);
     // join the array to complete the number, and add the necessary math sign
   }
+
+
+//   Given a varying number of integer arguments, return the digits that are not present in any of them.
+
+// Example:
+
+// [12, 34, 56, 78]  =>  "09"
+// [2015, 8, 26]     =>  "3479"
+// Note: the digits in the resulting string should be sorted.
+
