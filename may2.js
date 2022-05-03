@@ -157,3 +157,30 @@ function bingo(a) {
 function bingo(a) {
     return [2,9,14,7,15].every(x => a.includes(x)) ? "WIN" : "LOSE"
   }
+
+
+
+
+
+//   Given a number, find the permutation with the smallest absolute value (no leading zeros).
+
+// -20 => -20
+// -32 => -23
+// 0 => 0
+// 10 => 10
+// 29394 => 23499
+
+  function minPermutation(n) {
+    const first = Math.abs(n)
+    const next = first.toString().split('')
+    
+    const sortedArray = next.sort(function(a, b) {return a - b})
+    
+    if(sortedArray[0] == 0) {
+      const smallstNum = sortedArray.findIndex(el => el > 0);
+      sortedArray[0] = sortedArray[smallstNum];
+      sortedArray[smallstNum] = 0;
+    }
+    
+    return sortedArray.join("") * Math.sign(n);
+  }
