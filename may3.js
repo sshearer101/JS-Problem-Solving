@@ -48,3 +48,17 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
     }
     return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
   }
+
+
+  function noSpace(x){
+    //  console.log(x.split(''))
+    //  const answer = x.split('').map((a) => a === ''? x.splice(a)  : a)
+      const array = x.split('')
+      const newArray = []
+      for (let i = 0; i<array.length; i++){
+        if (array[i] != ' '){
+          newArray.push(array[i])
+        }
+      }
+      return (newArray.join(''))
+    }
