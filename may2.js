@@ -171,16 +171,27 @@ function bingo(a) {
 // 29394 => 23499
 
   function minPermutation(n) {
+
+    //before if statement
+    //make it positive
+    // split string
+    // sort numbers by value
     const first = Math.abs(n)
     const next = first.toString().split('')
     
     const sortedArray = next.sort(function(a, b) {return a - b})
     
+
     if(sortedArray[0] == 0) {
+        //if index 0 equals 0
       const smallstNum = sortedArray.findIndex(el => el > 0);
+        // create variable to find the first index that has a value more than 0
       sortedArray[0] = sortedArray[smallstNum];
+      // assigns the first index to that new value
       sortedArray[smallstNum] = 0;
+      //assigns the index of that new value to 0
     }
     
     return sortedArray.join("") * Math.sign(n);
+    // join the array to complete the number, and add the necessary math sign
   }
