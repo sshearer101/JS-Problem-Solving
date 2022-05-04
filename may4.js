@@ -14,3 +14,9 @@ function powersOfTwo(n){
     return array
   }
   
+
+  //alternative 
+
+  function powersOfTwo(n) {
+    return Array.from({length: n + 1}, (v, k) => 2 ** k);
+  }
