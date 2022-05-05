@@ -42,3 +42,38 @@ function powersOfTwo(n){
 // In this next case, we broke $217 into 2 $1 bills, 1 $5 bill, 1 $10 bill, and 2 $100 bills.
 
 // giveChange(217) // => [2,1,1,0,0,2]
+
+function giveChange(amount) {
+    var arr=[0,0,0,0,0,0]
+    while (amount>=100)
+    {
+      arr[5]++;
+      amount-=100;
+    }
+    while (amount>=50)
+    {
+      arr[4]++;
+      amount-=50;
+    }
+    while (amount>=20)
+    {
+      arr[3]++;
+      amount-=20;
+    }
+    while (amount>=10)
+    {
+      arr[2]++;
+      amount-=10;
+    }
+    while (amount>=5)
+    {
+      arr[1]++;
+      amount-=5;
+    }
+    while (amount>=1)
+    {
+      arr[0]++;
+      amount--;
+    }
+    return arr;
+  }
