@@ -133,5 +133,8 @@ function shortcut (string) {
 function shortcut(str) {
     return str.split('').filter(function(e) {
       return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
+      //indexOf(e) == -1 
+      //if it is not in the vowel array that is returned, then it is a -1
+      // "e" is 1 and "o" is 3 in "hello" since that is their indexes, while all the consonants are -1
     }).join('')
   }
