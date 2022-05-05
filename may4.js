@@ -111,3 +111,19 @@ function giveChange(amount) {
     function subt(a,b){
         return a - b
     }
+
+
+//     Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+
+
+function shortcut (string) {
+    const vowels = ["a", 'e', 'i', 'o', 'u']
+    
+    return string.split('').map((x) => x === "a" || x === "e" || x === "i" || x === "o" || x === "u" ? '' : x).join('')
+  }
