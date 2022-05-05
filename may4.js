@@ -127,3 +127,11 @@ function shortcut (string) {
     
     return string.split('').map((x) => x === "a" || x === "e" || x === "i" || x === "o" || x === "u" ? '' : x).join('')
   }
+
+//   alternative
+
+function shortcut(str) {
+    return str.split('').filter(function(e) {
+      return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
+    }).join('')
+  }
