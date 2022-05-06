@@ -64,3 +64,13 @@ function direction(facing, turn){
     const arr = "N NE E SE S SW W NW".split(" ");
     return arr[(arr.indexOf(facing) + Math.floor(turn / 45) + 1080) % 8];
   }
+
+
+//   Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+  function even_or_odd(number) {
+    if (number % 2 === 0)
+      return "Even"
+    else
+      return "Odd"
+  }
