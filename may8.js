@@ -87,4 +87,7 @@ String.prototype.toJadenCase = function () {
         }
        }
        
+
+       //closure is a function inside another function that can call global variables defined in the parent function
+       //it keeps methods private from the global scope, and makes changes locally
        
