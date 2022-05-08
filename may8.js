@@ -43,3 +43,27 @@ String.prototype.toJadenCase = function () {
         
         return res;
       }
+
+
+
+
+
+      function buildFun(n){
+
+        var res = []
+        
+        function createFunction(index) {
+          return function() {
+            return index;
+          };
+        };
+      
+        for (var i = 0; i< n; i++){
+          res.push(
+            createFunction(i)
+          )
+        }
+        
+        return res
+        
+      }
