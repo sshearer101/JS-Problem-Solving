@@ -15,3 +15,20 @@ function findDifference(a, b) {
     }
     return Math.abs(cuboida - cuboidb)
   }
+
+
+  //alternative 
+
+  function find_difference(a, b) {
+    return Math.abs(a[0]*a[1]*a[2]-b[0]*b[1]*b[2]);
+  }
+
+  //alternative 
+  
+  function volume(c) {
+    return c.reduce((x, y) => x * y);
+  }
+  
+  function find_difference(a, b) {
+    return Math.abs(volume(a) - volume(b));
+  }
