@@ -48,4 +48,15 @@ function findDifference(a, b) {
 function wrap(value) {
     return {value}
   }
+
+
+//alternative 
+
+
+  function wrap(value) {
+    return  {
+      "value":value 
+    };
+  }
+  
   
