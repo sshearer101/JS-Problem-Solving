@@ -142,3 +142,20 @@ function cannonsReady(gunners){
         return 20 <= temp && temp <= 30 ? ("-".repeat(water) + seed.repeat(fert)).repeat(water) : "-".repeat(water * water) + seed
       }
       
+
+
+
+function Song(title, artist){
+    this.title = title
+    this.artist = artist
+   let array = []
+    this.howMany = function (x){
+      let count = 0
+      x.map((i) => {  
+        array.includes(i.toUpperCase()) ? '' : array.push(i.toUpperCase()) && (count = count + 1)
+      })
+   return count
+      }
+  }
+
+
