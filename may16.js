@@ -34,3 +34,15 @@ const cannonsReady = (gunners) => {
     }
     return amount === response.length ? "Fire!" : "Shiver me timbers!"
     }
+
+
+    //alternative 
+
+    const cannonsReady = (gunners) => {
+        for (let i in gunners) {
+            if (gunners[i] == "nay") {
+              return "Shiver me timbers!"
+            }
+        }
+      return "Fire!"
+    }
