@@ -135,3 +135,10 @@ function cannonsReady(gunners){
       }
       return string
       }
+
+      //alternative 
+
+      function plant(seed, water, fert, temp){
+        return 20 <= temp && temp <= 30 ? ("-".repeat(water) + seed.repeat(fert)).repeat(water) : "-".repeat(water * water) + seed
+      }
+      
