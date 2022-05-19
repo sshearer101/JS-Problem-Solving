@@ -24,7 +24,7 @@ function warnTheSheep(queue) {
 
 
 
-  
+
 //   Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
 
 //   For example: ["3:1", "2:2", "0:1", ...]
@@ -58,3 +58,9 @@ function warnTheSheep(queue) {
         return count
   
   }
+
+  //with reduce function
+
+  const points=games=>games.reduce((output,current)=>{
+    return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+  },0)
