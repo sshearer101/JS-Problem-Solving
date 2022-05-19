@@ -64,3 +64,17 @@ function warnTheSheep(queue) {
   const points=games=>games.reduce((output,current)=>{
     return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
   },0)
+
+
+
+  function elevator(left, right, call){
+    if (call === left && call !== right){
+      return "left"
+    } else if (call > left && left > right){
+      return "left"
+    } else if (call < left && left < right){
+      return "left"
+    } else{
+      return "right"
+    }
+    }
